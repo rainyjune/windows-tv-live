@@ -32,4 +32,12 @@ console.log(
   '👋 This message is being logged by "renderer.js", included via webpack'
 );
 
-import "./app";
+// @ts-ignore
+import { AppRegistry } from "react-native-web";
+import App from "./App";
+
+AppRegistry.registerComponent("App", () => App);
+
+AppRegistry.runApplication("App", {
+  rootTag: document.getElementById("root"),
+});
