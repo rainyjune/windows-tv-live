@@ -10,7 +10,7 @@ export default function() {
   let [searchParams, setSearchParams] = useSearchParams();
   const videoURL = searchParams.get("videoURL");
   return (
-    <div><Link to="/main_window">Go Home</Link>
+    <div><Link to="/">Go Home</Link>
     <ReactHlsPlayer
     autoPlay={true}
     controls={true}

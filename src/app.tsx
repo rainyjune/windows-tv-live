@@ -5,12 +5,13 @@ import Player from "./Player";
 
 import {
   createBrowserRouter,
+  createHashRouter,
   RouterProvider,
 } from "react-router-dom";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
-    path: "/main_window",
+    path: "/",
     element: <Home />,
     loader: async ({ request }) => {
       // loaders can be async functions
